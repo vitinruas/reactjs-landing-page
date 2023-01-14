@@ -4,6 +4,7 @@ export const Wrapper = styled.section`
   ${(props) => {
     return css`
       background: ${props.background};
+      font-size: 2rem;
     `
   }}
 `
