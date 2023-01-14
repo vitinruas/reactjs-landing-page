@@ -1,5 +1,7 @@
+import * as Styled from './styles'
+
 const Home = () => {
-  return <section></section>
+  return <Styled.Wrapper background="blue">Hello, World!</Styled.Wrapper>
 }
 
 export { Home }
