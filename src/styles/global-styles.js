@@ -6,14 +6,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
   }
-
-  body {
-    ${(props) => {
-      return css`
-        background: ${props.theme.colors.primaryBg};
-      `
-    }}
-  }
 `
 
 export { GlobalStyles }
