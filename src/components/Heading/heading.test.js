@@ -4,7 +4,7 @@ import { renderTheme } from '../../styles/render-theme'
 import { theme } from '../../styles/theme'
 
 describe('<Heading />', () => {
-  test('should render heading with default color value', () => {
+  test('should render <Heading /> with default color value', () => {
     renderTheme(<Heading>text</Heading>)
 
     const heading = screen.getByRole('heading', { name: 'text' })
@@ -12,15 +12,15 @@ describe('<Heading />', () => {
     expect(heading).toHaveStyleRule('color', theme.colors.primaryColor)
   })
 
-  test('should render heading with default font-size value', () => {
+  test('should render <Heading /> with default font-size value', () => {
     renderTheme(<Heading>text</Heading>)
 
     const heading = screen.getByRole('heading', { name: 'text' })
 
-    expect(heading).toHaveStyleRule('font-size', theme.fonts.sizes.large)
+    expect(heading).toHaveStyleRule('font-size', theme.fonts.sizes.xmedium)
   })
 
-  test('should render heading with default text-transform value', () => {
+  test('should render <Heading /> with default text-transform value', () => {
     renderTheme(<Heading>text</Heading>)
 
     const heading = screen.getByRole('heading', { name: 'text' })
@@ -28,11 +28,19 @@ describe('<Heading />', () => {
     expect(heading).toHaveStyleRule('text-transform', 'capitalize')
   })
 
-  test('should render heading with dark theme', () => {
+  test('should render <Heading /> with dark theme', () => {
     renderTheme(<Heading appTheme="DARK">text</Heading>)
 
     const heading = screen.getByRole('heading', { name: 'text' })
 
     expect(heading).toHaveStyleRule('color', theme.colors.secondaryColor)
+  })
+
+  test('should render <Heading /> with correct small size', () => {
+    renderTheme(<Heading titleSize="small">text</Heading>)
+
+    const heading = screen.getByRole('heading', { name: 'text' })
+
+    expect(heading).toHaveStyleRule('font-size', theme.fonts.sizes.medium)
   })
 })
