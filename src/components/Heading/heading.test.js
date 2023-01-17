@@ -4,6 +4,14 @@ import { renderTheme } from '../../styles/render-theme'
 import { theme } from '../../styles/theme'
 
 describe('<Heading />', () => {
+  test('should only render <Heading /> with some text', () => {
+    renderTheme(<Heading>something cool is coming...</Heading>)
+
+    const heading = screen.getByRole('heading', { name: 'something cool is coming...' })
+
+    expect(heading).toBeInTheDocument()
+  })
+
   test('should render <Heading /> with correct default color value', () => {
     renderTheme(<Heading>text</Heading>)
 
