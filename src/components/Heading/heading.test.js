@@ -27,4 +27,12 @@ describe('<Heading />', () => {
 
     expect(heading).toHaveStyleRule('text-transform', 'capitalize')
   })
+
+  test('should render heading with dark theme', () => {
+    renderTheme(<Heading appTheme="DARK">text</Heading>)
+
+    const heading = screen.getByRole('heading', { name: 'text' })
+
+    expect(heading).toHaveStyleRule('color', theme.colors.secondaryColor)
+  })
 })
