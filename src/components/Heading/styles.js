@@ -12,15 +12,11 @@ const titleSize = {
     `,
   medium: (theme) =>
     css`
-      font-size: ${theme.fonts.sizes.large};
+      font-size: ${theme.fonts.sizes.xmedium};
     `,
   big: (theme) =>
     css`
       font-size: ${theme.fonts.sizes.xlarge};
-    `,
-  huge: (theme) =>
-    css`
-      font-size: ${theme.fonts.sizes.big};
     `,
 }
 

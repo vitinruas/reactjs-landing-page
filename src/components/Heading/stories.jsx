@@ -14,7 +14,7 @@ export default {
     titleSize: {
       name: 'Title size',
       defaultValue: 'medium',
-      options: ['small', 'medium', 'big', 'huge'],
+      options: ['small', 'medium', 'big'],
     },
     titleType: {
       name: 'Title type',
