@@ -67,4 +67,12 @@ describe('<Heading />', () => {
 
     expect(heading.tagName.toLowerCase()).toBe('h3')
   })
+
+  test('should render <Heading /> with correct text-transform configuration', () => {
+    renderTheme(<Heading upperCase={true}>text</Heading>)
+
+    const heading = screen.getByRole('heading', { name: 'text' })
+
+    expect(heading).toHaveStyleRule('text-transform', 'uppercase')
+  })
 })
