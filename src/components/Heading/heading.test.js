@@ -11,4 +11,12 @@ describe('<Heading />', () => {
 
     expect(heading).toHaveStyleRule('color', theme.colors.primaryColor)
   })
+
+  test('should render heading with default font-size value', () => {
+    renderTheme(<Heading>text</Heading>)
+
+    const heading = screen.getByRole('heading', { name: 'text' })
+
+    expect(heading).toHaveStyleRule('font-size', theme.fonts.sizes.large)
+  })
 })
