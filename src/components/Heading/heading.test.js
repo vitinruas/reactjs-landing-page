@@ -19,4 +19,12 @@ describe('<Heading />', () => {
 
     expect(heading).toHaveStyleRule('font-size', theme.fonts.sizes.large)
   })
+
+  test('should render heading with default text-transform value', () => {
+    renderTheme(<Heading>text</Heading>)
+
+    const heading = screen.getByRole('heading', { name: 'text' })
+
+    expect(heading).toHaveStyleRule('text-transform', 'capitalize')
+  })
 })
