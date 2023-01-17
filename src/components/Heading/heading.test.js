@@ -43,4 +43,12 @@ describe('<Heading />', () => {
 
     expect(heading).toHaveStyleRule('font-size', theme.fonts.sizes.medium)
   })
+
+  test('should render <Heading /> with correct medium size', () => {
+    renderTheme(<Heading titleSize="medium">text</Heading>)
+
+    const heading = screen.getByRole('heading', { name: 'text' })
+
+    expect(heading).toHaveStyleRule('font-size', theme.fonts.sizes.xmedium)
+  })
 })
