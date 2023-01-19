@@ -10,4 +10,12 @@ describe('<Text />', () => {
 
     expect(paragraph).toBeInTheDocument()
   })
+
+  test('should render <Text /> with correct font-size value', () => {
+    renderTheme(<Text>text</Text>)
+
+    const paragraph = screen.getByText('text')
+
+    expect(paragraph).toHaveStyleRule('font-size', '2.0rem')
+  })
 })
