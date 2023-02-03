@@ -22,7 +22,7 @@ Heading.propTypes = {
   appTheme: P.oneOf(['LIGHT', 'DARK']),
   titleType: P.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   titleSize: P.oneOf(['small', 'medium', 'big']),
-  upperCase: P.bool.isRequired,
+  upperCase: P.bool,
 }
 
 export { Heading }
