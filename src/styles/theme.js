@@ -24,4 +24,15 @@ export const theme = {
       xhuge: '7.2rem',
     },
   },
+  spacings: {
+    small: '0.5rem',
+    medium: '1rem',
+    xmedium: '1.5rem',
+    large: '2rem',
+    xlarge: '2.5rem',
+    big: '3.5rem',
+    xbig: '4rem',
+    huge: '4.5rem',
+    xhuge: '5rem',
+  },
 }
