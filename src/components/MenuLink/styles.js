@@ -2,11 +2,11 @@ import styled, { css } from 'styled-components'
 import { theme } from '../../styles/theme'
 
 export const Container = styled.a`
-  ${({ theme }) => css`
+  ${({ theme, appTheme }) => css`
     display: block;
     font-size: ${theme.fonts.sizes.small};
     padding: ${theme.spacings.medium};
-    color: ${theme.colors.primaryColor};
+    color: ${appTheme === 'DARK' ? theme.colors.primaryColor : theme.colors.secondaryColor};
     position: relative;
     text-decoration: none;
 
@@ -18,7 +18,7 @@ export const Container = styled.a`
       content: '';
       position: absolute;
       left: 50%;
-      bottom: 0;
+      bottom: 8px;
       transform: translateX(-50%);
       width: 0;
       height: 0.2rem;
