@@ -44,4 +44,9 @@ export const links = [
     link: '#link_9',
     newTab: false,
   },
+  {
+    children: 'link_10',
+    link: '#link_10',
+    newTab: false,
+  },
 ]
