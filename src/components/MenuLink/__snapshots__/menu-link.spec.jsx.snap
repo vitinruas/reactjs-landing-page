@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuLink /> should take a snapshot 1`] = `
+.c0 {
+  display: block;
+  font-size: 1.6rem;
+  padding: 1rem;
+  color: #0A1128;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+.c0::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 0.2rem;
+  background-color: #dc143c;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.c0:hover::after {
+  width: 50%;
+}
+
+<a
+  class="c0"
+  href="any_link"
+  target="_self"
+>
+  any_text
+</a>
+`;
